@@ -1,0 +1,32 @@
+# YAML config example for lab-orchestrator CLI.
+#
+# Works with train.py in the same directory out of the box.
+# Run from examples/sweep/:
+#   python -m lab_orchestrator experiments.yaml --gpus 0 --dry-run
+#   python -m lab_orchestrator experiments.yaml --gpus 0,1,2,3
+#   python -m lab_orchestrator experiments.yaml --gpus 0 --resume
+
+names: [big, small]
+seeds: [42, 43, 44]
+
+# Estimated GPU-hours per seed (exclusive, single worker).
+# Calibrate on your hardware; LPT quality depends on accuracy.
+weights:
+  big: 2.0
+  small: 0.5
+
+# Option A: template string ({name} and {seed} are substituted).
+cmd_template: "python train.py --config {name} --seed {seed} --epochs 50"
+
+# Option B (alternative): structured command parts.
+# The scheduler inserts {name} and --seed {seed} after base automatically.
+# Result: python train.py big --seed 42 --batch-size 256 --epochs 50
+# cmd_parts:
+#   base: ["python", "train.py"]
+#   per_name:
+#     big: ["--batch-size", "256"]
+#     small: ["--batch-size", "64"]
+#   common: ["--epochs", "50"]
+
+# Directory scanned by --resume for seed_*.json files.
+results_dir: results
