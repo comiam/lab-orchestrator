@@ -1,5 +1,7 @@
 # gpu-experiment-scheduler
 
+![Banner](./resources/banner.jpg)
+
 Lightweight single-node multi-GPU experiment scheduler for Python ML research.
 Zero dependencies (stdlib only), copy-paste ready.
 
