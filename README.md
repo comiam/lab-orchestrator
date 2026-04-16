@@ -1,7 +1,7 @@
 # lab-orchestrator
 
 Lightweight single-node GPU experiment scheduler. Zero hard dependencies
-(stdlib only), ~400 lines, copy-paste ready.
+(stdlib only), copy-paste ready.
 
 Schedules a `name * seed` task matrix across multiple GPUs on one machine
 using **LPT ordering** (heavy tasks first) and **load-aware dispatch**
@@ -182,4 +182,8 @@ where α ~= 0.4-0.5 for typical DL workloads (memory-bandwidth bound).
 
 ## License
 
-Apache 2.0
+MIT License (see [LICENSE](LICENSE)).
+
+# Also
+
+Contributions are very welcome! Open an issue or a PR if you have suggestions or want to add features.
