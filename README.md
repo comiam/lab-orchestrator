@@ -1,7 +1,7 @@
-# lab-orchestrator
+# gpu-experiment-scheduler
 
-Lightweight single-node GPU experiment scheduler. Zero hard dependencies
-(stdlib only), copy-paste ready.
+Lightweight single-node multi-GPU experiment scheduler for Python ML research.
+Zero dependencies (stdlib only), copy-paste ready.
 
 Schedules a `name * seed` task matrix across multiple GPUs on one machine
 using **LPT ordering** (heavy tasks first) and **load-aware dispatch**

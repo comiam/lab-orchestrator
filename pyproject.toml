@@ -5,11 +5,11 @@ build-backend = "hatchling.build"
 [project]
 name = "lab-orchestrator"
 version = "1.0.0"
-description = "Lightweight single-node GPU experiment scheduler with LPT ordering and load-aware dispatch"
+description = "Lightweight single-node multi-GPU experiment scheduler for ML research. LPT ordering, load-aware dispatch, resume, zero dependencies."
 readme = "README.md"
 license = "MIT"
 requires-python = ">=3.10"
-keywords = ["gpu", "scheduler", "experiment", "research", "deep-learning"]
+keywords = ["gpu", "scheduler", "experiment", "research", "deep-learning", "multi-gpu", "machine-learning", "task-scheduler", "mlops", "pytorch"]
 classifiers = [
     "Development Status :: 5 - Production/Stable",
     "Intended Audience :: Science/Research",
